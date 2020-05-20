@@ -1,0 +1,30 @@
+/* .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  
+  .navbar .navbar-collapse {
+    text-align: center;
+  } */
+
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+
+.table td {
+    text-align: center;   
+ }
+
+ .table th {
+     text-align: center;
+ }
+
+ .winner {
+     font-weight: bold;
+     font-size: 115%;
+ }

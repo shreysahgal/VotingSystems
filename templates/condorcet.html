@@ -24,32 +24,22 @@
         </div>
     </nav>
     <div class="text-center">
-        <h2>Preference Schedule</h2>
+        <h2>Condorcet Voting Method</h2>
     </div>
     <div class="container-md text-center">
-        <p>Below is the preference schedule for the file you uploaded. Click on one of the buttoms under the preference schedule to determine the winner using 5 different voting systems!</p>
-    </div>
-    <div class="container-md">
+        <p>Using the Condorcet method on the uploaded file, <span class="winner">{{ winner }}</span> is the winner!</div>
+    <div class="container-sm text-center" style="width:50%;">
         {{ table|safe }}
     </div>
-    <div class="container-md">
-        <div class="row">
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/plurality" role="button">Plurality</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/bordacount" role="button">Borda Count</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/instantrunoff" role="button">Instant Runoff</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/condorcet" role="button">Condercet</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/approval" role="button">Top 2 Approval</a>
-            </div>
-        </div>
+    <div class="container-md text-center">
+        <h4>About the Condorcet Method</h4>
+        <p>
+            The Condorcet method does pairwise comparisons of the candidates and compares them head-to-head. If candidate A wins the matchup over
+            candidate B, A gets 1 head-to-head point. Similarly, if B wins, B gets 1 head-to-head point. If it is a tie, A and B both get 0.5 points.
+            Once each candidate is compared to each other candidate, the candidate with the most points wins. The winner using the Condorcet method is
+            different than what is referred to as the "Condorcet Winner": a candidate is the Condorcet Winner if and only if they win every head-to-head
+            match-up with each other candidate.
+        </p>
     </div>
 
     <footer class="text-center fixed-bottom page-footer font-small blue">

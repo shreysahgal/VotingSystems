@@ -24,32 +24,21 @@
         </div>
     </nav>
     <div class="text-center">
-        <h2>Preference Schedule</h2>
+        <h2>Borda Count Voting Method</h2>
     </div>
     <div class="container-md text-center">
-        <p>Below is the preference schedule for the file you uploaded. Click on one of the buttoms under the preference schedule to determine the winner using 5 different voting systems!</p>
-    </div>
-    <div class="container-md">
+        <p>Using the Borda Count Method on the uploaded file yields <span class="winner">{{ winner }}</span> as the winner!</div>
+    <div class="container-sm text-center" style="width:50%;">
         {{ table|safe }}
     </div>
-    <div class="container-md">
-        <div class="row">
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/plurality" role="button">Plurality</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/bordacount" role="button">Borda Count</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/instantrunoff" role="button">Instant Runoff</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/condorcet" role="button">Condercet</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/approval" role="button">Top 2 Approval</a>
-            </div>
-        </div>
+    <div class="container-md text-center">
+        <h4>About the Borda Count</h4>
+        <p>The Borda Count method gives candidates points based on what rank they were on each voters' preference ballot. The higher 
+            up a candidate is on the ballot, the more points they get. For example if there are 3 candidates running for president and 
+            Stacy gets 10 first-place votes, 3 second-place votes, and 5 third-place votes, she will, 10*3 + 3*2 + 5*1 = 41 Borda count points.
+            Once the total points for each candidate is determined, the candidate with the most points wins. There is a potential problem with this method, though:
+            it is possible for a candidate with the majority of first-place votes to lose because a different candidate was in general higher up on voters' ballots.
+            This violates the Majority Critereon which states that if a candidate receives the majority of first-place votes, they should win the election. </p>
     </div>
 
     <footer class="text-center fixed-bottom page-footer font-small blue">

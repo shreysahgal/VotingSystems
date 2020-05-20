@@ -24,32 +24,20 @@
         </div>
     </nav>
     <div class="text-center">
-        <h2>Preference Schedule</h2>
+        <h2>Plurality Voting Method</h2>
     </div>
     <div class="container-md text-center">
-        <p>Below is the preference schedule for the file you uploaded. Click on one of the buttoms under the preference schedule to determine the winner using 5 different voting systems!</p>
-    </div>
-    <div class="container-md">
+        <p>Using the Plurality Voting Method on the uploaded file yields <span class="winner">{{ winner }}</span> as the winner!</div>
+    <div class="container-sm text-center" style="width:50%;">
         {{ table|safe }}
     </div>
-    <div class="container-md">
-        <div class="row">
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/plurality" role="button">Plurality</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/bordacount" role="button">Borda Count</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/instantrunoff" role="button">Instant Runoff</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/condorcet" role="button">Condercet</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/approval" role="button">Top 2 Approval</a>
-            </div>
-        </div>
+    <div class="container-md text-center">
+        <h4>About the Plurality Method</h4>
+        <p>The plurality method of voting simply counts how many first-place votes each candidate receives and the winner is the candidate with the most first-place votes. 
+            This voting method is very common in the United States. Ties are possible with this method and would have to be determined using a runoff vote. This system is 
+            sometimes confused with the majority voting system but the two are different: in a majority voting system, a candidate only wins if they recieve more than half
+            of the total votes cast whereas in a plurality system, the winner doesn't necessarily have more than have of the votes, just more than the other candidates. When
+            Note that when there are only 2 candidates on the ballot, the majority and the plurality are equal.</p>
     </div>
 
     <footer class="text-center fixed-bottom page-footer font-small blue">

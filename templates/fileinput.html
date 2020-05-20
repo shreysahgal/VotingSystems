@@ -1,10 +1,33 @@
+<!-- <!doctype html>
+<title>Upload new File</title>
+<h1>Upload new File</h1>
+<form method=post enctype=multipart/form-data>
+    <input type=file name=file>
+    <input type=submit value=Upload>
+</form>
+
+ -->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Voting Systems!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+</head>
+
+<body>
+    {{ table }}
+</body>
+</html>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Voting Systems!</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-
+    <script href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -23,33 +46,28 @@
             
         </div>
     </nav>
+    <br>
     <div class="text-center">
-        <h2>Preference Schedule</h2>
+        <h2>Welcome to VoteSys!</h2>
     </div>
     <div class="container-md text-center">
-        <p>Below is the preference schedule for the file you uploaded. Click on one of the buttoms under the preference schedule to determine the winner using 5 different voting systems!</p>
+        <h5>Upload a file to get started.</h5>  
     </div>
-    <div class="container-md">
-        {{ table|safe }}
-    </div>
-    <div class="container-md">
-        <div class="row">
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/plurality" role="button">Plurality</a>
+    <br>
+    <div class="container" style="width:50%;">
+        <form method='POST' enctype=multipart/form-data>
+            <div class="row">
+            <div class="custom-file">
+                <input type="file" name="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+                &nbsp;
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <p>Note: File must be a .csv</p>
+                </div>
+
             </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/bordacount" role="button">Borda Count</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/instantrunoff" role="button">Instant Runoff</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/condorcet" role="button">Condercet</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/approval" role="button">Top 2 Approval</a>
-            </div>
-        </div>
+        </form>
     </div>
 
     <footer class="text-center fixed-bottom page-footer font-small blue">

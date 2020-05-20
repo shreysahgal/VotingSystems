@@ -24,35 +24,24 @@
         </div>
     </nav>
     <div class="text-center">
-        <h2>Preference Schedule</h2>
+        <h2>Instant Runoff Voting Method</h2>
     </div>
     <div class="container-md text-center">
-        <p>Below is the preference schedule for the file you uploaded. Click on one of the buttoms under the preference schedule to determine the winner using 5 different voting systems!</p>
-    </div>
-    <div class="container-md">
+        <p>Using the Instant Runoff Method on the uploaded file yields <span class="winner">{{ winner }}</span> as the winner!</div>
+    <div class="container-sm text-center" style="width:50%;">
         {{ table|safe }}
     </div>
-    <div class="container-md">
-        <div class="row">
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/plurality" role="button">Plurality</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/bordacount" role="button">Borda Count</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/instantrunoff" role="button">Instant Runoff</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/condorcet" role="button">Condercet</a>
-            </div>
-            <div class="col text-center">
-                <a class="btn btn-primary" href="/analyze/approval" role="button">Top 2 Approval</a>
-            </div>
-        </div>
+    <div class="container-md text-center">
+        <h4>About the Instant Runoff Method</h4>
+        <p>The instant runoff method is a sort of extensions of the plurality method with takes advantage of the fact that the given rankings are linear,
+            that is to say that if A is preferred over B and B is preferred over C, A is preferred over C. In this method instead of determining a plurality winner,
+            the plularity loser is determined (the candidate with the fewest first-place votes) and subsequently removed from the ballot. Then all of the votes are shifted up
+            (if B was a voter's first choice and A was a voter's second choice and B was removed from the ballot, A would now be the voter's first choice) and the process is repeated until
+            a candidate has a majority.
+        </p>
     </div>
 
-    <footer class="text-center fixed-bottom page-footer font-small blue">
+    <footer class="text-center page-footer font-small blue">
         <p style="font-size: 80%">© 2020 Copyright
           <a href="https://github.com/shreysahgal/">Shrey Sahgal</a></p>
       </footer>
