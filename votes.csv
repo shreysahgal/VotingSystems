@@ -1,0 +1,13 @@
+A,B,C,D,E,F
+E,D,B,F,C,A
+F,C,A,B,E,D
+F,D,B,E,C,A
+D,B,E,F,C,A
+D,F,B,E,C,A
+E,D,B,A,F,C
+B,A,D,E,C,F
+F,E,B,A,C,D
+E,C,A,B,D,F
+F,D,B,C,E,A
+A,F,B,C,E,D
+D,E,A,F,B,C
