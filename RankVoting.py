@@ -273,15 +273,16 @@ class Aggregator:
             return None
 
 
-pref_sched = PreferenceSchedule('HP_ranking.csv')
-aggr = Aggregator(pref_sched)
+if __name__ == '__main__':
+    pref_sched = PreferenceSchedule('HP_ranking.csv')
+    aggr = Aggregator(pref_sched)
 
-print()
-# print(pref_sched)
-print()
-# aggr.plurality()
-# aggr.borda_count()
-# aggr.instant_runoff()
-# aggr.condorcet_winner()
-aggr.top2approval()
-print()
+    print()
+    # print(pref_sched)
+    print()
+    # aggr.plurality()
+    # aggr.borda_count()
+    # aggr.instant_runoff()
+    # aggr.condorcet_winner()
+    aggr.top2approval()
+    print()
